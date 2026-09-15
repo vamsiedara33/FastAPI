@@ -30,7 +30,7 @@ class BookRequest(BaseModel):
     title: str = Field(min_length=1, max_length=100)
     author: str = Field(min_length=1)
     description: str = Field(min_length=1, max_length=100)
-    rating: int = Field(gt=0, lt=5) 
+    rating: int = Field(gt=0, lt=6) # [1,2,3,4,5]
 
     # model_config is used to provide additional configuration options for the Pydantic model.
     model_config = {
